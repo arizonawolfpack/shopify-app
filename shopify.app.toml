@@ -1,0 +1,6 @@
+# Shopify App Configuration
+name = "YourAppName"
+client_id = "your_shopify_api_key"
+scopes = "read_products, write_orders"
+redirect_urls = ["https://your-app-url.com/auth/callback"]
+embedded = true
