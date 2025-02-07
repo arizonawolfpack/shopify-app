@@ -13,28 +13,25 @@ const { verifySession } = require('./middleware/shopifySession.js');
 dotenv.config();
 validateEnvVars();
 
-// Initialize Shopify Context
 Shopify.Context.initialize({
-  API_KEY: process.env.SHOPIFY_API_KEY,
-  API_SECRET_KEY: process.env.SHOPIFY_API_SECRET,
-  SCOPES: ['read_products', 'write_orders'],
-  HOST_NAME: process.env.HOST.replace(/https?:\/\//, ''), // Remove protocol
-  IS_EMBEDDED_APP: true,
-  API_VERSION: '2023-01',
+    API_KEY: process.env.SHOPIFY_API_KEY,
+    API_SECRET_KEY: process.env.SHOPIFY_API_SECRET,
+    SCOPES: ['read_products', 'write_orders'],
+    HOST_NAME: process.env.HOST.replace(/https?:\/\//, ''),
+    IS_EMBEDDED_APP: true,
+    API_VERSION: '2023-01',
 });
 
 const app = express();
 app.use(bodyParser.json());
 app.use(session({ secret: 'your_secret_key', resave: false, saveUninitialized: false }));
 
-// Routes
 app.use('/auth', authRoutes);
 app.use('/gamification', verifySession, gamificationRoutes);
 app.use('/incentives', verifySession, incentiveRoutes);
 app.use('/analytics', verifySession, analyticsRoutes);
 
-// Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Shopify app running on port ${PORT}`);
+    console.log(`Shopify app running on port ${PORT}`);
 });
