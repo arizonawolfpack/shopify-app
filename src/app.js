@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import session from 'express-session';
-import Shopify, { Context } from '@shopify/shopify-api';
 import dotenv from 'dotenv';
 import { validateEnvVars } from './utils/envValidation.js';
 import authRoutes from './routes/auth.js';
@@ -9,6 +8,10 @@ import gamificationRoutes from './routes/gamification.js';
 import incentiveRoutes from './routes/incentives.js';
 import analyticsRoutes from './routes/analytics.js';
 import { verifySession } from './middleware/shopifySession.js';
+
+// Fix Shopify API import style
+import ShopifyPkg from '@shopify/shopify-api';
+const { Shopify, Context } = ShopifyPkg;
 
 dotenv.config();
 validateEnvVars();
