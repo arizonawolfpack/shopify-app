@@ -2,7 +2,6 @@
 	"name": "shopify-app",
 	"version": "1.0.0",
 	"description": "Shopify app with gamification and analytics features",
-	"type": "module",
 	"main": "src/app.js",
 	"scripts": {
 		"start": "node src/app.js",
