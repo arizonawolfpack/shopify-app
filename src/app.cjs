@@ -14,8 +14,8 @@ dotenv.config();
 validateEnvVars();
 
 Shopify.Context.initialize({
-    API_KEY: ,
-    API_SECRET_KEY: ,
+    API_KEY: "REPLACE_WITH_YOUR_KEY",
+    API_SECRET_KEY: "REPLACE_WITH_YOUR_SECRET", 
     SCOPES: ['read_products', 'write_orders'],
     HOST_NAME: process.env.https://railway.com/project/45cae9da-66b1-49a7-b466-c54a1560b1ae?environmentId=c3017c15-d502-4e63-b17d-6ec25179ff10,
     IS_EMBEDDED_APP: true,
