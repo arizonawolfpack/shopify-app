@@ -1,5 +1,6 @@
-name = "YourActualAppName"
-client_id = "your_actual_shopify_api_key"
+name = "Incentive Generator"
+client_id = "f0753ff4b50b9ecd64e7a01e3bd5b982"
+SHOPIFY_API_SECRET = 934caf1dae4d729771e07847769169bd
 scopes = "read_products, write_orders"
-redirect_urls = ["https://your-deployed-app.com/auth/callback"]
+redirect_urls = ["https://apps.shopify.com/"]
 embedded = true
