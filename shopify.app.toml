@@ -1,6 +1,6 @@
 name = "Incentive Generator"
-client_id = "f0753ff4b50b9ecd64e7a01e3bd5b982"
-SHOPIFY_API_SECRET = 934caf1dae4d729771e07847769169bd
+client_id = ""
+SHOPIFY_API_SECRET = 
 scopes = "read_products, write_orders"
 redirect_urls = ["https://apps.shopify.com/"]
 embedded = true
